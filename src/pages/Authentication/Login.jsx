@@ -27,16 +27,7 @@ const Login = () => {
         }
     };
 
-    // const handleGoogleSignIn = async () => {
-    //     try {
-    //         await signInWithPopup(auth, googleProvider);
-    //         toast.success('Google login successful!');
-    //         navigate('/');
-    //     } catch (error) {
-    //         toast.error('Google login failed.');
-    //         console.error(error);
-    //     }
-    // };
+    
 
     return (
         <div>
@@ -91,15 +82,7 @@ const Login = () => {
                         </form>
                         <SocialLogin></SocialLogin>
 
-                      
-                        {/* <div className="form-control mt-4">
-                            <button
-                                onClick={handleGoogleSignIn}
-                                className="btn btn-secondary"
-                            >
-                                Login with Google
-                            </button>
-                        </div> */}
+                     
 
                        
                         <p className="text-center text-sm text-gray-500 mt-4">

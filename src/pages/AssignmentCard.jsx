@@ -128,7 +128,7 @@ const AssignmentCard = ({ currentUserEmail }) => {
 
   return (
     <div className="container mx-auto p-4">
-         <div className="flex items-center gap-4 ">
+         <div className="flex mt-20 items-center gap-4 ">
         {/* Filter by Difficulty */}
         <select
           value={difficulty}
@@ -150,12 +150,13 @@ const AssignmentCard = ({ currentUserEmail }) => {
           className="input input-bordered"
         />
       </div>
-      <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 mt-20 gap-6">
+      <div className="grid grid-cols-1   md:grid-cols-2 lg:grid-cols-3 mt-20 gap-6">
         {Array.isArray(assignments) && assignments?.map((assignment) => (
           <div
             key={assignment._id}
             className="card bg-base-100 shadow-md hover:shadow-lg transition-shadow duration-300"
           >
+            <div className="border rounded-2xl">
             <figure>
               <img
                 src={assignment.thumbnail}
@@ -185,12 +186,13 @@ const AssignmentCard = ({ currentUserEmail }) => {
                   Update
                 </button>
                 <button
-                  className="bg-gradient-to-r from-blue-500 to-green-500 text-white py-2 px-4 rounded "
+                  className="bg-gradient-to-r from-blue-500 to-green-500 text-white py-2 px-4  rounded "
                   onClick={() => modernDelete(assignment._id)}
                 >
                   Delete
                 </button>
               </div>
+            </div>
             </div>
           </div>
         ))}
